@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
+</head>
+<body class="sunny">
+    <div class="container">
+        <div class="weather-card">
+            <div class="search-box">
+                <input type="text" class="search-input" id="cityInput" placeholder="Search for a city..." value="London">
+                <button class="search-btn" id="searchBtn">Search</button>
+            </div>
+
+            <div class="error" id="error">City not found. Please try again!</div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <div class="weather-content" id="weatherContent">
+                <div class="location">
+                    <div class="city-name" id="cityName">London</div>
+                    <div class="country" id="country">GB</div>
+                </div>
+
+                <div class="weather-main">
+                    <div class="weather-icon" id="weatherIcon">☀️</div>
+                    <div class="temperature">
+                        <div class="temp" id="temp">20°</div>
+                        <div class="description" id="description">Clear sky</div>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <div class="detail-label">
+                            <span>💧</span>
+                            <span>Humidity</span>
+                        </div>
+                        <div class="detail-value" id="humidity">65%</div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-label">
+                            <span>💨</span>
+                            <span>Wind Speed</span>
+                        </div>
+                        <div class="detail-value" id="wind">12 km/h</div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-label">
+                            <span>🌡️</span>
+                            <span>Pressure</span>
+                        </div>
+                        <div class="detail-value" id="pressure">1013 hPa</div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-label">
+                            <span>👁️</span>
+                            <span>Visibility</span>
+                        </div>
+                        <div class="detail-value" id="visibility">10 km</div>
+                    </div>
+                </div>
+
+                <div class="feels-like">
+                    <div class="feels-item">
+                        <div class="feels-label">Feels like</div>
+                        <div class="feels-value" id="feelsLike">18°</div>
+                    </div>
+                    <div class="feels-item">
+                        <div class="feels-label">Min</div>
+                        <div class="feels-value" id="tempMin">15°</div>
+                    </div>
+                    <div class="feels-item">
+                        <div class="feels-label">Max</div>
+                        <div class="feels-value" id="tempMax">25°</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">Weather data provided by OpenWeatherMap</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
