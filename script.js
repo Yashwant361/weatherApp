@@ -61,3 +61,5 @@ const data = response.data;
         searchBtn.disabled = false;
     }
 };
+
+fetchWeather('London');
